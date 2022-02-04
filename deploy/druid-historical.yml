@@ -69,7 +69,7 @@ spec:
           envFrom:
             - configMapRef:
                 name: druid
-          image: 'apache/druid:0.18.1'
+          image: 'image-registry.openshift-image-registry.svc:5000/apache-druid/druid@sha256:494bb85c6f5aeff96012466c34656cb54b8aded0b616b73d17fcd9b2d3996e85'
           args:
             - historical
       restartPolicy: Always

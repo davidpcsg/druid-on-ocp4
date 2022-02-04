@@ -66,16 +66,12 @@ spec:
           envFrom:
             - configMapRef:
                 name: druid
-          image: 'apache/druid:0.18.1'
+          image: 'image-registry.openshift-image-registry.svc:5000/apache-druid/druid@sha256:494bb85c6f5aeff96012466c34656cb54b8aded0b616b73d17fcd9b2d3996e85'
           args:
             - broker
       restartPolicy: Always
       terminationGracePeriodSeconds: 30
-      dnsPolicy: ClusterFirst
-      securityContext:
-        runAsUser: 1000
-        runAsGroup: 1000
-        fsGroup: 1000
+      dnsPolicy: ClusterFirst      
       schedulerName: default-scheduler
   strategy:
     type: RollingUpdate

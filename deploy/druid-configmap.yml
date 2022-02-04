@@ -8,7 +8,7 @@ metadata:
 data:
   druid_zk_service_host: 'druid-zookeeper-headless:2181'
   druid_metadata_storage_connector_password: druid
-  druid_metadata_storage_connector_connectURI: 'jdbc:postgresql://druid-postgresql:5432/druid'
+  druid_metadata_storage_connector_connectURI: 'jdbc:postgresql://postgresql:5432/druid'
   druid_indexer_logs_type: file
   druid_emitter_logging_logLevel: debug
   druid_emitter_http_recipientBaseUrl: 'http://druid_exporter_url:druid_exporter_port/druid'

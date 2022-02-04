@@ -100,13 +100,10 @@ spec:
             - name: config
               mountPath: /config-scripts
           terminationMessagePolicy: File
-          image: 'zookeeper:3.5.5'
+          image: 'image-registry.openshift-image-registry.svc:5000/apache-druid/druid-zookeeper@sha256:c414d545b218290d5bcd23539e38dcd99467694df8d68c3cad36102d1dc7515b'
       restartPolicy: Always
       terminationGracePeriodSeconds: 1800
-      dnsPolicy: ClusterFirst
-      securityContext:
-        runAsUser: 1000
-        fsGroup: 1000
+      dnsPolicy: ClusterFirst      
       schedulerName: default-scheduler
   volumeClaimTemplates:
     - metadata:
