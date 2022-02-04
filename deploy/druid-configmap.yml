@@ -16,7 +16,7 @@ data:
   druid_metadata_storage_type: postgresql
   druid_extensions_loadList: >-
     ["druid-histogram", "druid-datasketches", "druid-lookups-cached-global",
-    "postgresql-metadata-storage", "druid-s3-extensions"]
+    "postgresql-metadata-storage", "druid-s3-extensions", "druid-kafka-indexing-service"]
   druid_metadata_storage_connector_user: druid
   druid_indexer_logs_directory: /opt/data/indexing-logs
   DRUID_USE_CONTAINER_IP: 'true'
